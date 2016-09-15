@@ -10,9 +10,11 @@ STARTTIME=$(date +%s)
 source "$(dirname "${BASH_SOURCE}")/lib/init.sh"
 source "${OS_ROOT}/contrib/node/install-sdn.sh"
 
+PLATFORM=$(os::build::host_platform)
+
 if [[ "${OS_RELEASE:-}" == "n" ]]; then
   # Use local binaries
-  imagedir="${OS_OUTPUT_BINPATH}/linux/amd64"
+  imagedir="${OS_OUTPUT_BINPATH}/${PLATFORM}"
   # identical to build-cross.sh
   os::build::os_version_vars
   OS_RELEASE_COMMIT="${OS_GIT_SHORT_VERSION}"
@@ -31,7 +33,7 @@ else
   fi
 
   # Extract the release achives to a staging area.
-  os::build::detect_local_release_tars "linux-64bit"
+  os::build::detect_local_release_tars $(os::build::host_platform_friendly)
 
   echo "Building images from release tars for commit ${OS_RELEASE_COMMIT}:"
   echo " primary: $(basename ${OS_PRIMARY_RELEASE_TAR})"
@@ -96,7 +98,9 @@ function image {
 
 # images that depend on scratch / centos
 image openshift/origin-pod                   images/pod
-image openshift/openvswitch                  images/openvswitch
+if [[ ${PLATFORM} != "linux/ppc64le" ]];then
+  image openshift/openvswitch                  images/openvswitch
+fi
 # images that depend on openshift/origin-base
 image openshift/origin                       images/origin
 image openshift/origin-haproxy-router        images/router/haproxy
@@ -110,7 +114,9 @@ image openshift/origin-recycler              images/recycler
 image openshift/origin-docker-builder        images/builder/docker/docker-builder
 image openshift/origin-sti-builder           images/builder/docker/sti-builder
 image openshift/origin-f5-router             images/router/f5
-image openshift/node                         images/node
+if [[ ${PLATFORM} != "linux/ppc64le" ]];then
+  image openshift/node                         images/node
+fi
 
 # extra images (not part of infrastructure)
 image openshift/hello-openshift              examples/hello-openshift
