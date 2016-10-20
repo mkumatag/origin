@@ -46,7 +46,7 @@
 Name:           %{package_name}
 # Version is not kept up to date and is intended to be set by tito custom
 # builders provided in the .tito/lib directory of this project
-Version:        0.0.1
+Version:        1.3.1
 Release:        0%{?dist}
 Summary:        Open Source Container Management by Red Hat
 License:        ASL 2.0
@@ -62,7 +62,7 @@ ExclusiveArch:  x86_64 aarch64 ppc64le
 Source0:        https://%{import_path}/archive/%{commit}/%{name}-%{version}.tar.gz
 BuildRequires:  systemd
 BuildRequires:  bsdtar
-BuildRequires:  golang >= %{golang_version}
+#BuildRequires:  golang >= %{golang_version}
 BuildRequires:  krb5-devel
 BuildRequires:  rsync
 Requires:       %{name}-clients = %{version}-%{release}
