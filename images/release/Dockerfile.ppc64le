@@ -14,9 +14,9 @@ ENV VERSION=1.7 \
     TMPDIR=/openshifttmp
 ENV PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-RUN curl ftp://ftp.unicamp.br/pub/linuxpatch/toolchain/at/redhat/RHEL7/at10.0/advance-toolchain-golang-at-10.0-0.ppc64le.rpm -o advance-toolchain-golang-at-10.0-0.ppc64le.rpm && \
-    rpm -Uvh advance-toolchain-golang-at-10.0-0.ppc64le.rpm && \
-    rm -rf advance-toolchain-golang-at-10.0-0.ppc64le.rpm
+RUN curl ftp://ftp.unicamp.br/pub/linuxpatch/toolchain/at/redhat/RHEL7/at10.0/advance-toolchain-golang-at-10.0-1.ppc64le.rpm -o advance-toolchain-golang-at-10.0-1.ppc64le.rpm && \
+    rpm -Uvh advance-toolchain-golang-at-10.0-1.ppc64le.rpm && \
+    rm -rf advance-toolchain-golang-at-10.0-1.ppc64le.rpm
 
 RUN mkdir $TMPDIR && \
     INSTALL_PKGS="make gcc zip mercurial krb5-devel bsdtar" && \
