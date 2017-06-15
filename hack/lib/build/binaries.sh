@@ -86,7 +86,7 @@ function os::build::setup_env() {
     local go_version
     go_version=($(go version))
     if [[ "${go_version[2]}" < "${OS_REQUIRED_GO_VERSION}" ]]; then
-      os::log::fatal "Detected Go version: ${go_version[*]}.
+      os::log::warning "Detected Go version: ${go_version[*]}.
 Builds require Go version ${OS_REQUIRED_GO_VERSION} or greater."
     fi
   fi
