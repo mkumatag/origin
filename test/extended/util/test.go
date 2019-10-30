@@ -554,6 +554,9 @@ var (
 		"[Suite:openshift/csi]": {
 			`External Storage \[Driver:`,
 		},
+		"[Skipped:Non-MVP]": {
+			`\[sig-storage\] In-tree Volumes \[Driver\: gluster\]`,
+		},
 	}
 
 	// labelExcludes temporarily block tests out of a specific suite
@@ -567,6 +570,7 @@ var (
 		`\[Flaky\]`,
 		`\[local\]`,
 		`\[Suite:openshift/test-cmd\]`,
+		`\[Skipped:Non-MVP\]`,
 	}
 )
 
