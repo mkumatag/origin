@@ -545,6 +545,11 @@ var (
 		"[Suite:openshift/csi]": {
 			`External Storage \[Driver:`,
 		},
+		"[Skipped:Non-MVP]": {
+			`\[sig-storage\] In-tree Volumes \[Driver\: gluster\]`,
+			`\[sig-storage\] GCP Volumes GlusterFS should be mountable`,
+			`\[sig-storage\] Dynamic Provisioning \[k8s.io\] GlusterDynamicProvisioner`,
+		},
 	}
 
 	// labelExcludes temporarily block tests out of a specific suite
@@ -558,6 +563,7 @@ var (
 		`\[Flaky\]`,
 		`\[local\]`,
 		`\[Suite:openshift/test-cmd\]`,
+		`\[Skipped:Non-MVP\]`,
 	}
 )
 
