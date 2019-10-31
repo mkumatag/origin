@@ -19106,7 +19106,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
     resources: {}
     postCommit: {}
     nodeSelector: null
@@ -20189,7 +20189,7 @@ var _testExtendedTestdataBuildsBuildTimingTestS2iBuildJson = []byte(`{
       "sourceStrategy": {
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         },
         "env": [
           {
@@ -20626,7 +20626,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
 `)
 
 func testExtendedTestdataBuildsStatusfailFailedassembleYamlBytes() ([]byte, error) {
@@ -20822,7 +20822,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
     type: Source
 `)
 
@@ -20858,7 +20858,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
     type: Source
 `)
 
@@ -20911,7 +20911,7 @@ objects:
           value: "5"
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
       type: Source
     # this test specifically does a push, to help exercise the code that sets
     # environment variables on build pods (i.e., by having a source secret and
@@ -21090,7 +21090,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
       type: Source
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
@@ -21108,7 +21108,7 @@ items:
           value: "5"
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
       type: Source
 `)
 
@@ -21237,7 +21237,7 @@ items:
           value: 127.0.0.1:3128
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
 - kind: BuildConfig
   apiVersion: v1
   metadata:
@@ -21259,7 +21259,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
         env:
         - name: SOME_HTTP_PROXY
           value: https://envuser:password@proxy3.com
@@ -21334,7 +21334,7 @@ var _testExtendedTestdataBuildsTestBuildRevisionJson = []byte(`{
           "sourceStrategy": {
             "from": {
               "kind": "DockerImage",
-              "name": "docker.io/openshift/test-build-simples2i:latest"
+              "name": "docker.io/openshifttests/test-build-simples2i:latest"
             }
           }
         },
@@ -22780,7 +22780,7 @@ var _testExtendedTestdataBuildsTestNosrcBuildJson = []byte(`{
           "sourceStrategy": {
             "from": {
               "kind": "DockerImage",
-              "name": "docker.io/openshift/test-build-simples2i:latest"
+              "name": "docker.io/openshifttests/test-build-simples2i:latest"
             }
           }
         }
@@ -22832,7 +22832,7 @@ var _testExtendedTestdataBuildsTestS2iBuildQuotaJson = []byte(`{
       "sourceStrategy": {
         "from": {
           "kind":"DockerImage",
-          "name":"docker.io/openshift/test-build-simples2i:latest"
+          "name":"docker.io/openshifttests/test-build-simples2i:latest"
         },
         "env": [
           {
@@ -22889,7 +22889,7 @@ var _testExtendedTestdataBuildsTestS2iBuildJson = []byte(`{
         ],
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         }
       }
     },
@@ -22960,7 +22960,7 @@ var _testExtendedTestdataBuildsTestS2iNoOutputnameJson = []byte(`{
         ],
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         }
       }
     }
@@ -23106,7 +23106,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
       env:
         - name: BUILD_LOGLEVEL
           value: "5"
@@ -23242,7 +23242,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
       env:
         - name: BUILD_LOGLEVEL
           value: "5"
@@ -46065,7 +46065,7 @@ var _testExtendedTestdataCmdTestCmdTestdataTestS2iBuildJson = []byte(`{
         ],
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         }
       }
     },
@@ -55838,7 +55838,7 @@ objects:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
     output:
       to:
         kind: ImageStreamTag
