@@ -16,7 +16,7 @@ spec:
       containers:
         - name: csi-cluster-driver-registrar
           # TODO: replace with official image
-          image: quay.io/k8scsi/csi-cluster-driver-registrar:tmp-test-1.14
+          image: docker.io/openshifttests/csi-cluster-driver-registrar:tmp-test-1.14-ppc64le
           args:
             - --v=5
             - --csi-address=$(ADDRESS)
