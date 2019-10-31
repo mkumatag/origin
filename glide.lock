@@ -1,5 +1,5 @@
 hash: 855e5f89c3a2829f74dcf0c7854fa01e7889f5a8089e322e434121dd38a2ddfa
-updated: 2019-10-31T14:33:58.09614043-04:00
+updated: 2019-10-31T15:35:10.017009883-04:00
 imports:
 - name: bitbucket.org/ww/goautoneg
   version: a7dc8b61c822528f973a5e4e7b272055c6fdb43e
@@ -2105,7 +2105,7 @@ imports:
   subpackages:
   - config/v1beta1
 - name: k8s.io/kubernetes
-  version: 80e58b181a579aa596ca4eae5ab1d1fb719ba762
+  version: 7fb99e01f327162378cdc8c95a99cc3b36c47108
   repo: https://github.com/mkumatag/kubernetes.git
   subpackages:
   - cmd/cloud-controller-manager/app
