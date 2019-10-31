@@ -52057,7 +52057,7 @@ spec:
         securityContext:
           privileged: true
         # This image is built from the images/openldap directory. Temporary repo location.
-        image: docker.io/mrogers950/origin-openldap-test:fedora29
+        image: docker.io/openshifttests/origin-openldap-test:fedora29-ppc64le
         ports:
         # StartTLS works over 389
         - containerPort: 389
