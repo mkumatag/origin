@@ -136,7 +136,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http

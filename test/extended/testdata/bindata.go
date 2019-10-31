@@ -30646,10 +30646,10 @@ export KUBECONFIG="${temp_config}"
 #os::cmd::expect_success 'oc new-project test-project-admin'
 #os::cmd::try_until_success "oc project test-project-admin"
 
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift test'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --generator=run-controller/v1 test2'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --restart=Never test3'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --generator=job/v1 --restart=Never test4'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift test'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --generator=run-controller/v1 test2'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --restart=Never test3'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --generator=job/v1 --restart=Never test4'
 os::cmd::expect_success 'oc delete dc/test rc/test2 pod/test3 job/test4'
 
 os::cmd::expect_success_and_text 'oc run --dry-run foo --image=bar -o name'                                'deploymentconfig.apps.openshift.io/foo'
@@ -35866,7 +35866,7 @@ var _testExtendedTestdataCmdTestCmdTestdataAppScenariosK8sLonelyPodJson = []byte
         "containers": [
           {
             "name": "lonely-pod",
-            "image": "openshift/hello-openshift",
+            "image": "docker.io/openshifttests/hello-openshift",
             "ports": [
               {
                 "containerPort": 8080,
@@ -36173,7 +36173,7 @@ var _testExtendedTestdataCmdTestCmdTestdataAppScenariosK8sServicePodNoRcJson = [
         "containers": [
           {
             "name": "hello-openshift",
-            "image": "openshift/hello-openshift",
+            "image": "docker.io/openshifttests/hello-openshift",
             "ports": [
               {
                 "containerPort": 8080,
@@ -39629,7 +39629,7 @@ var _testExtendedTestdataCmdTestCmdTestdataHelloOpenshiftHelloPodJson = []byte(`
     "containers": [
       {
         "name": "hello-openshift",
-        "image": "openshift/hello-openshift",
+        "image": "docker.io/openshifttests/hello-openshift",
         "ports": [
           {
             "containerPort": 8080,
@@ -41767,7 +41767,7 @@ items:
           run: v1-job
       spec:
         containers:
-        - image: openshift/hello-openshift
+        - image: docker.io/openshifttests/hello-openshift
           name: hello-container
         restartPolicy: Never
 
@@ -44684,7 +44684,7 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/hello-openshift
       - kind: Route
         apiVersion: v1
         metadata:
@@ -53288,7 +53288,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -53305,7 +53305,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -53537,7 +53537,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       # image: openshift/deployment-example:v1
       ports:
       - containerPort: 8080
@@ -53699,7 +53699,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54007,7 +54007,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54024,7 +54024,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54363,7 +54363,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54380,7 +54380,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54397,7 +54397,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -55690,7 +55690,7 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/hello-openshift
 `)
 
 func testExtendedTestdataTemplatesTemplateinstance_badobjectYamlBytes() ([]byte, error) {
@@ -55750,7 +55750,7 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/hello-openshift
       - kind: Route
         apiVersion: v1
         metadata:

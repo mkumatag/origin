@@ -17,7 +17,7 @@
         "containers": [
           {
             "name": "lonely-pod",
-            "image": "openshift/hello-openshift",
+            "image": "docker.io/openshifttests/hello-openshift",
             "ports": [
               {
                 "containerPort": 8080,

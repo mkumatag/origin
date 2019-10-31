@@ -37,7 +37,7 @@ RUN curl -vvv hello-openshift:8080
 		g.Describe("with a build being created from new-build", func() {
 			g.It("should be able to run a build that references a cluster service", func() {
 				g.By("standing up a new hello world service")
-				err := oc.Run("new-app").Args("docker.io/openshift/hello-openshift").Execute()
+				err := oc.Run("new-app").Args("docker.io/openshifttests/hello-openshift").Execute()
 				o.Expect(err).NotTo(o.HaveOccurred())
 
 				err = exutil.WaitForDeploymentConfig(oc.KubeClient(), oc.AppsClient().AppsV1(), oc.Namespace(), "hello-openshift", 1, true, oc)
