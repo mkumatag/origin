@@ -19106,7 +19106,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
     resources: {}
     postCommit: {}
     nodeSelector: null
@@ -20189,7 +20189,7 @@ var _testExtendedTestdataBuildsBuildTimingTestS2iBuildJson = []byte(`{
       "sourceStrategy": {
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         },
         "env": [
           {
@@ -20324,7 +20324,7 @@ func testExtendedTestdataBuildsClusterConfigYaml() (*asset, error) {
 	return a, nil
 }
 
-var _testExtendedTestdataBuildsCustomBuildDockerfile = []byte(`FROM quay.io/buildah/stable:latest
+var _testExtendedTestdataBuildsCustomBuildDockerfile = []byte(`FROM docker.io/openshifttests/buildah-stable:latest
 # For simplicity, /tmp/build contains the inputs we’ll be building when we
 # run this custom builder image. Normally the custom builder image would
 # fetch this content from some location at build time. (e.g. via git clone).
@@ -20626,7 +20626,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
 `)
 
 func testExtendedTestdataBuildsStatusfailFailedassembleYamlBytes() ([]byte, error) {
@@ -20822,7 +20822,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
     type: Source
 `)
 
@@ -20858,7 +20858,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
     type: Source
 `)
 
@@ -20911,7 +20911,7 @@ objects:
           value: "5"
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
       type: Source
     # this test specifically does a push, to help exercise the code that sets
     # environment variables on build pods (i.e., by having a source secret and
@@ -21090,7 +21090,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
       type: Source
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
@@ -21108,7 +21108,7 @@ items:
           value: "5"
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
       type: Source
 `)
 
@@ -21237,7 +21237,7 @@ items:
           value: 127.0.0.1:3128
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
 - kind: BuildConfig
   apiVersion: v1
   metadata:
@@ -21259,7 +21259,7 @@ items:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
         env:
         - name: SOME_HTTP_PROXY
           value: https://envuser:password@proxy3.com
@@ -21334,7 +21334,7 @@ var _testExtendedTestdataBuildsTestBuildRevisionJson = []byte(`{
           "sourceStrategy": {
             "from": {
               "kind": "DockerImage",
-              "name": "docker.io/openshift/test-build-simples2i:latest"
+              "name": "docker.io/openshifttests/test-build-simples2i:latest"
             }
           }
         },
@@ -22780,7 +22780,7 @@ var _testExtendedTestdataBuildsTestNosrcBuildJson = []byte(`{
           "sourceStrategy": {
             "from": {
               "kind": "DockerImage",
-              "name": "docker.io/openshift/test-build-simples2i:latest"
+              "name": "docker.io/openshifttests/test-build-simples2i:latest"
             }
           }
         }
@@ -22832,7 +22832,7 @@ var _testExtendedTestdataBuildsTestS2iBuildQuotaJson = []byte(`{
       "sourceStrategy": {
         "from": {
           "kind":"DockerImage",
-          "name":"docker.io/openshift/test-build-simples2i:latest"
+          "name":"docker.io/openshifttests/test-build-simples2i:latest"
         },
         "env": [
           {
@@ -22889,7 +22889,7 @@ var _testExtendedTestdataBuildsTestS2iBuildJson = []byte(`{
         ],
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         }
       }
     },
@@ -22960,7 +22960,7 @@ var _testExtendedTestdataBuildsTestS2iNoOutputnameJson = []byte(`{
         ],
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         }
       }
     }
@@ -23106,7 +23106,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
       env:
         - name: BUILD_LOGLEVEL
           value: "5"
@@ -23242,7 +23242,7 @@ spec:
     sourceStrategy:
       from:
         kind: DockerImage
-        name: docker.io/openshift/test-build-simples2i:latest
+        name: docker.io/openshifttests/test-build-simples2i:latest
       env:
         - name: BUILD_LOGLEVEL
           value: "5"
@@ -30646,10 +30646,10 @@ export KUBECONFIG="${temp_config}"
 #os::cmd::expect_success 'oc new-project test-project-admin'
 #os::cmd::try_until_success "oc project test-project-admin"
 
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift test'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --generator=run-controller/v1 test2'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --restart=Never test3'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --generator=job/v1 --restart=Never test4'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift test'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --generator=run-controller/v1 test2'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --restart=Never test3'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --generator=job/v1 --restart=Never test4'
 os::cmd::expect_success 'oc delete dc/test rc/test2 pod/test3 job/test4'
 
 os::cmd::expect_success_and_text 'oc run --dry-run foo --image=bar -o name'                                'deploymentconfig.apps.openshift.io/foo'
@@ -31181,7 +31181,7 @@ spec:
     spec:
       containers:
       - name: ruby-helloworld
-        image: openshift/origin-pod
+        image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         resources: {}
 status: {}
@@ -31238,9 +31238,9 @@ os::cmd::expect_success 'oc describe deploymentConfigs test-deployment-config'
 os::cmd::expect_success_and_text 'oc get dc -o name' 'deploymentconfig.apps.openshift.io/test-deployment-config'
 os::cmd::try_until_success 'oc get rc/test-deployment-config-1'
 os::cmd::expect_success_and_text 'oc describe dc test-deployment-config' 'deploymentconfig=test-deployment-config'
-os::cmd::expect_success_and_text 'oc status' 'dc/test-deployment-config deploys docker.io/openshift/origin-pod:latest'
+os::cmd::expect_success_and_text 'oc status' 'dc/test-deployment-config deploys k8s.gcr.io/pause:3.1'
 os::cmd::expect_success 'oc create -f ${TEST_DATA}/hello-openshift/hello-pod.json'
-os::cmd::try_until_text 'oc status' 'pod/hello-openshift runs openshift/hello-openshift'
+os::cmd::try_until_text 'oc status' 'pod/hello-openshift runs docker.io/openshifttests/hello-openshift'
 
 os::test::junit::declare_suite_start "cmd/deployments/env"
 # Patch a nil list
@@ -35866,7 +35866,7 @@ var _testExtendedTestdataCmdTestCmdTestdataAppScenariosK8sLonelyPodJson = []byte
         "containers": [
           {
             "name": "lonely-pod",
-            "image": "openshift/hello-openshift",
+            "image": "docker.io/openshifttests/hello-openshift",
             "ports": [
               {
                 "containerPort": 8080,
@@ -36173,7 +36173,7 @@ var _testExtendedTestdataCmdTestCmdTestdataAppScenariosK8sServicePodNoRcJson = [
         "containers": [
           {
             "name": "hello-openshift",
-            "image": "openshift/hello-openshift",
+            "image": "docker.io/openshifttests/hello-openshift",
             "ports": [
               {
                 "containerPort": 8080,
@@ -39629,7 +39629,7 @@ var _testExtendedTestdataCmdTestCmdTestdataHelloOpenshiftHelloPodJson = []byte(`
     "containers": [
       {
         "name": "hello-openshift",
-        "image": "openshift/hello-openshift",
+        "image": "docker.io/openshifttests/hello-openshift",
         "ports": [
           {
             "containerPort": 8080,
@@ -41767,7 +41767,7 @@ items:
           run: v1-job
       spec:
         containers:
-        - image: openshift/hello-openshift
+        - image: docker.io/openshifttests/hello-openshift
           name: hello-container
         restartPolicy: Never
 
@@ -44684,7 +44684,7 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/hello-openshift
       - kind: Route
         apiVersion: v1
         metadata:
@@ -45750,7 +45750,7 @@ spec:
         name: test-deployment
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         name: ruby-helloworld
         ports:
@@ -45974,7 +45974,7 @@ spec:
         deploymentconfig: test-deployment
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         name: ruby-helloworld
         ports:
@@ -46065,7 +46065,7 @@ var _testExtendedTestdataCmdTestCmdTestdataTestS2iBuildJson = []byte(`{
         ],
         "from": {
           "kind": "DockerImage",
-          "name": "docker.io/openshift/test-build-simples2i:latest"
+          "name": "docker.io/openshifttests/test-build-simples2i:latest"
         }
       }
     },
@@ -47444,7 +47444,7 @@ spec:
         name: tag-images
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         name: sample-name
         ports:
@@ -52057,7 +52057,7 @@ spec:
         securityContext:
           privileged: true
         # This image is built from the images/openldap directory. Temporary repo location.
-        image: docker.io/mrogers950/origin-openldap-test:fedora29
+        image: docker.io/openshifttests/origin-openldap-test:fedora29-ppc64le
         ports:
         # StartTLS works over 389
         - containerPort: 389
@@ -53288,7 +53288,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -53305,7 +53305,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -53537,7 +53537,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       # image: openshift/deployment-example:v1
       ports:
       - containerPort: 8080
@@ -53699,7 +53699,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54007,7 +54007,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54024,7 +54024,7 @@ items:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54363,7 +54363,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54380,7 +54380,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -54397,7 +54397,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -55690,7 +55690,7 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/hello-openshift
 `)
 
 func testExtendedTestdataTemplatesTemplateinstance_badobjectYamlBytes() ([]byte, error) {
@@ -55750,7 +55750,7 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/hello-openshift
       - kind: Route
         apiVersion: v1
         metadata:
@@ -55838,7 +55838,7 @@ objects:
       sourceStrategy:
         from:
           kind: DockerImage
-          name: docker.io/openshift/test-build-simples2i:latest
+          name: docker.io/openshifttests/test-build-simples2i:latest
     output:
       to:
         kind: ImageStreamTag

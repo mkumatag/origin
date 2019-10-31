@@ -278,10 +278,10 @@ export KUBECONFIG="${temp_config}"
 #os::cmd::expect_success 'oc new-project test-project-admin'
 #os::cmd::try_until_success "oc project test-project-admin"
 
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift test'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --generator=run-controller/v1 test2'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --restart=Never test3'
-os::cmd::expect_success 'oc run --image=openshift/hello-openshift --generator=job/v1 --restart=Never test4'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift test'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --generator=run-controller/v1 test2'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --restart=Never test3'
+os::cmd::expect_success 'oc run --image=docker.io/openshifttests/hello-openshift --generator=job/v1 --restart=Never test4'
 os::cmd::expect_success 'oc delete dc/test rc/test2 pod/test3 job/test4'
 
 os::cmd::expect_success_and_text 'oc run --dry-run foo --image=bar -o name'                                'deploymentconfig.apps.openshift.io/foo'

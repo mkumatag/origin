@@ -156,7 +156,7 @@ func launchTestMulticastPod(f *e2e.Framework, nodeName string, podName string) (
 			Containers: []kapiv1.Container{
 				{
 					Name:    contName,
-					Image:   "openshift/test-multicast",
+					Image:   "docker.io/openshifttests/test-multicast:latest",
 					Command: []string{"sleep", "1000"},
 				},
 			},
