@@ -17,7 +17,7 @@ spec:
 
 
         - name: csi-provisioner
-          image: quay.io/k8scsi/csi-provisioner:v1.0.1
+          image: docker.io/openshifttests/csi-provisioner:v1.0.1-ppc64le
           args:
             - "--provisioner=csi-hostpath"
             - "--csi-address=$(ADDRESS)"
@@ -32,7 +32,7 @@ spec:
 
 
         - name: driver-registrar
-          image: quay.io/k8scsi/csi-node-driver-registrar:v1.0.2
+          image: docker.io/openshifttests/csi-node-driver-registrar:v1.0.2-ppc64le
           args:
             - --v=5
             - --csi-address=/csi/csi.sock
@@ -54,7 +54,7 @@ spec:
 
 
         - name: mock
-          image: quay.io/k8scsi/mock-driver:v1.1.1
+          image: docker.io/openshifttests/mock-driver:v1.1.1-ppc64le
           env:
             - name: CSI_ENDPOINT
               value: /csi/csi.sock

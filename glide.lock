@@ -1,8 +1,8 @@
-hash: 0cbd9151ca02eb4589ec42377f028ef04de462557b1985e6e972e3d6c831df29
-updated: 2019-10-09T16:17:36.270361974-04:00
+hash: 855e5f89c3a2829f74dcf0c7854fa01e7889f5a8089e322e434121dd38a2ddfa
+updated: 2019-10-31T15:35:10.017009883-04:00
 imports:
 - name: bitbucket.org/ww/goautoneg
-  version: 2ae31c8b6b30d2f4c8100c20d527b571e9c433bb
+  version: a7dc8b61c822528f973a5e4e7b272055c6fdb43e
   repo: https://github.com/munnerz/goautoneg.git
 - name: cloud.google.com/go
   version: 3b1ae45394a234c385be014e9a488f2bb6eef821
@@ -1057,7 +1057,7 @@ imports:
   - user/informers/externalversions/user/v1
   - user/listers/user/v1
 - name: github.com/openshift/library-go
-  version: 27b03247913b2f6a0abcea95cb9b6c896adc2531
+  version: 3369b6beaedc81c7709cd1061459b261dcd55512
   subpackages:
   - pkg/apiserver/admission/admissionrestconfig
   - pkg/apiserver/admission/admissiontimeout
@@ -1421,7 +1421,7 @@ imports:
   - pubsub/v1
   - tpu/v1
 - name: google.golang.org/appengine
-  version: 971852bfffca25b069c31162ae8f247a3dba083b
+  version: 16bce7d3dc4e458f2f6f56a1349cbbfcdc8a8fdf
   subpackages:
   - internal
   - internal/app_identity
@@ -2105,8 +2105,8 @@ imports:
   subpackages:
   - config/v1beta1
 - name: k8s.io/kubernetes
-  version: 910ed37794970984599792084da6031e2353f43b
-  repo: https://github.com/openshift/kubernetes.git
+  version: 7fb99e01f327162378cdc8c95a99cc3b36c47108
+  repo: https://github.com/mkumatag/kubernetes.git
   subpackages:
   - cmd/cloud-controller-manager/app
   - cmd/cloud-controller-manager/app/apis/config
