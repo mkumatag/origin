@@ -64,7 +64,7 @@ spec:
     spec:
       containers:
       - name: ruby-helloworld
-        image: openshift/origin-pod
+        image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         resources: {}
 status: {}

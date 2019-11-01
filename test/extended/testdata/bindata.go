@@ -20324,7 +20324,7 @@ func testExtendedTestdataBuildsClusterConfigYaml() (*asset, error) {
 	return a, nil
 }
 
-var _testExtendedTestdataBuildsCustomBuildDockerfile = []byte(`FROM quay.io/buildah/stable:latest
+var _testExtendedTestdataBuildsCustomBuildDockerfile = []byte(`FROM docker.io/openshifttests/buildah-stable:latest
 # For simplicity, /tmp/build contains the inputs we’ll be building when we
 # run this custom builder image. Normally the custom builder image would
 # fetch this content from some location at build time. (e.g. via git clone).
@@ -31181,7 +31181,7 @@ spec:
     spec:
       containers:
       - name: ruby-helloworld
-        image: openshift/origin-pod
+        image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         resources: {}
 status: {}
@@ -31238,7 +31238,7 @@ os::cmd::expect_success 'oc describe deploymentConfigs test-deployment-config'
 os::cmd::expect_success_and_text 'oc get dc -o name' 'deploymentconfig.apps.openshift.io/test-deployment-config'
 os::cmd::try_until_success 'oc get rc/test-deployment-config-1'
 os::cmd::expect_success_and_text 'oc describe dc test-deployment-config' 'deploymentconfig=test-deployment-config'
-os::cmd::expect_success_and_text 'oc status' 'dc/test-deployment-config deploys docker.io/openshift/origin-pod:latest'
+os::cmd::expect_success_and_text 'oc status' 'dc/test-deployment-config deploys docker.io/k8s.gcr.io/pause:3.1'
 os::cmd::expect_success 'oc create -f ${TEST_DATA}/hello-openshift/hello-pod.json'
 os::cmd::try_until_text 'oc status' 'pod/hello-openshift runs openshift/hello-openshift'
 
@@ -45750,7 +45750,7 @@ spec:
         name: test-deployment
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         name: ruby-helloworld
         ports:
@@ -45974,7 +45974,7 @@ spec:
         deploymentconfig: test-deployment
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         name: ruby-helloworld
         ports:
@@ -47444,7 +47444,7 @@ spec:
         name: tag-images
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: k8s.gcr.io/pause:3.1
         imagePullPolicy: IfNotPresent
         name: sample-name
         ports:
@@ -51403,7 +51403,7 @@ spec:
     spec:
       containers:
       - name: simplev1
-        image: gcr.io/google_containers/busybox
+        image: busybox
         command: ["/bin/sh", "-c", "exit 0"]
       restartPolicy: Never
 `)

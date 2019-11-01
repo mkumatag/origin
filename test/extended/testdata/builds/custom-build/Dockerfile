@@ -1,4 +1,4 @@
-FROM quay.io/buildah/stable:latest
+FROM docker.io/openshifttests/buildah-stable:latest
 # For simplicity, /tmp/build contains the inputs we’ll be building when we
 # run this custom builder image. Normally the custom builder image would
 # fetch this content from some location at build time. (e.g. via git clone).
