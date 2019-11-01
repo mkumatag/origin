@@ -77,7 +77,7 @@ var _ = g.Describe("[Feature:Builds][Conformance] s2i build with a root user ima
 		})
 		o.Expect(err).NotTo(o.HaveOccurred())
 
-		err = oc.Run("new-build").Args("docker.io/openshift/test-build-roots2i~https://github.com/sclorg/nodejs-ex", "--name", "nodejspass").Execute()
+		err = oc.Run("new-build").Args("docker.io/openshifttests/test-build-roots2i~https://github.com/sclorg/nodejs-ex", "--name", "nodejspass").Execute()
 		o.Expect(err).NotTo(o.HaveOccurred())
 
 		err = exutil.WaitForABuild(oc.BuildClient().BuildV1().Builds(oc.Namespace()), "nodejspass-1", nil, nil, nil)
