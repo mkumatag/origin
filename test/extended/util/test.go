@@ -557,6 +557,7 @@ var (
 		"[Skipped:Non-MVP]": {
 			`\[sig-storage\] In-tree Volumes \[Driver\: gluster\]`,
 			`\[sig-storage\] GCP Volumes GlusterFS should be mountable`,
+			`\[sig-storage\] Dynamic Provisioning \[k8s.io\] GlusterDynamicProvisioner`,
 		},
 	}
 
