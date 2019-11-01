@@ -497,8 +497,8 @@ var _ = g.Describe("[Feature:DeploymentConfig] deploymentconfigs", func() {
 			}
 			o.Expect(pollErr).NotTo(o.HaveOccurred())
 
-			if istag.Tag == nil || istag.Tag.From == nil || istag.Tag.From.Name != "k8s.gcr.io/pause" {
-				err = fmt.Errorf("expected %q to be part of the image reference in %#v", "k8s.gcr.io/pause", istag)
+			if istag.Tag == nil || istag.Tag.From == nil || istag.Tag.From.Name != "k8s.gcr.io/pause:3.1" {
+				err = fmt.Errorf("expected %q to be part of the image reference in %#v", "k8s.gcr.io/pause:3.1", istag)
 				o.Expect(err).NotTo(o.HaveOccurred())
 			}
 		})
