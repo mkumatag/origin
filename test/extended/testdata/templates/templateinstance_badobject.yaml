@@ -28,4 +28,4 @@ items:
             spec:
               containers:
               - name: hello-openshift
-                image: openshift/hello-openshift
+                image: docker.io/openshifttests/ppc64le-openshift-hello-openshift

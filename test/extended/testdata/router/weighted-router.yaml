@@ -122,7 +122,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/ppc64le-openshift-hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -139,7 +139,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/ppc64le-openshift-hello-openshift
       ports:
       - containerPort: 8080
         name: http
@@ -156,7 +156,7 @@ objects:
     terminationGracePeriodSeconds: 1
     containers:
     - name: test
-      image: openshift/hello-openshift
+      image: docker.io/openshifttests/ppc64le-openshift-hello-openshift
       ports:
       - containerPort: 8080
         name: http

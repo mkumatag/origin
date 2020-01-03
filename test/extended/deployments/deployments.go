@@ -497,8 +497,8 @@ var _ = g.Describe("[Feature:DeploymentConfig] deploymentconfigs", func() {
 			}
 			o.Expect(pollErr).NotTo(o.HaveOccurred())
 
-			if istag.Tag == nil || istag.Tag.From == nil || istag.Tag.From.Name != "openshift/origin-pod" {
-				err = fmt.Errorf("expected %q to be part of the image reference in %#v", "openshift/origin-pod", istag)
+			if istag.Tag == nil || istag.Tag.From == nil || istag.Tag.From.Name != "docker.io/openshifttests/ppc64le-openshift-origin-pod" {
+				err = fmt.Errorf("expected %q to be part of the image reference in %#v", "docker.io/openshifttests/ppc64le-openshift-origin-pod", istag)
 				o.Expect(err).NotTo(o.HaveOccurred())
 			}
 		})

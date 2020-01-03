@@ -34,7 +34,7 @@ items:
           run: v1-job
       spec:
         containers:
-        - image: openshift/hello-openshift
+        - image: docker.io/openshifttests/ppc64le-openshift-hello-openshift
           name: hello-container
         restartPolicy: Never
 

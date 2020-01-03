@@ -101,7 +101,7 @@ func supGroupPod(fsGroup int64, supGroup int64) *kapiv1.Pod {
 			Containers: []kapiv1.Container{
 				{
 					Name:  supplementalGroupsPod,
-					Image: "openshift/origin-pod",
+					Image: "docker.io/openshifttests/ppc64le-openshift-origin-pod",
 				},
 			},
 		},

@@ -23,7 +23,7 @@ spec:
         name: test-deployment
     spec:
       containers:
-      - image: openshift/origin-pod
+      - image: docker.io/openshifttests/ppc64le-openshift-origin-pod
         imagePullPolicy: IfNotPresent
         name: ruby-helloworld
         ports:

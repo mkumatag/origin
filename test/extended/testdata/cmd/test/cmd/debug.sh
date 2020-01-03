@@ -64,7 +64,7 @@ spec:
     spec:
       containers:
       - name: ruby-helloworld
-        image: openshift/origin-pod
+        image: docker.io/openshifttests/ppc64le-openshift-origin-pod
         imagePullPolicy: IfNotPresent
         resources: {}
 status: {}

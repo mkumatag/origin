@@ -14,7 +14,7 @@ var _ = g.Describe("[Feature:Builds][Conformance] build can reference a cluster 
 		testDockerfile = `
 FROM centos:7
 RUN cat /etc/resolv.conf
-RUN curl -vvv hello-openshift:8080
+RUN curl -vvv ppc64le-openshift-hello-openshift:8080
 `
 	)
 
@@ -35,13 +35,13 @@ RUN curl -vvv hello-openshift:8080
 		g.Describe("with a build being created from new-build", func() {
 			g.It("should be able to run a build that references a cluster service", func() {
 				g.By("standing up a new hello world service")
-				err := oc.Run("new-app").Args("docker.io/openshift/hello-openshift").Execute()
+				err := oc.Run("new-app").Args("docker.io/openshifttests/ppc64le-openshift-hello-openshift").Execute()
 				o.Expect(err).NotTo(o.HaveOccurred())
 
-				err = exutil.WaitForDeploymentConfig(oc.KubeClient(), oc.AppsClient().AppsV1(), oc.Namespace(), "hello-openshift", 1, true, oc)
+				err = exutil.WaitForDeploymentConfig(oc.KubeClient(), oc.AppsClient().AppsV1(), oc.Namespace(), "ppc64le-openshift-hello-openshift", 1, true, oc)
 				o.Expect(err).NotTo(o.HaveOccurred())
 
-				err = exutil.WaitForEndpoint(oc.KubeFramework().ClientSet, oc.Namespace(), "hello-openshift")
+				err = exutil.WaitForEndpoint(oc.KubeFramework().ClientSet, oc.Namespace(), "ppc64le-openshift-hello-openshift")
 				o.Expect(err).NotTo(o.HaveOccurred())
 
 				g.By("calling oc new-build with a Dockerfile")

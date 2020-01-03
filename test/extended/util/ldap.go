@@ -21,7 +21,7 @@ import (
 
 const (
 	// This image is used for both client and server pods. Temporary repo location.
-	OpenLDAPTestImage = "docker.io/mrogers950/origin-openldap-test:fedora29"
+	OpenLDAPTestImage = "docker.io/openshifttests/ppc64le-openshift-origin-openldap-test:latest"
 	caCertFilename    = "ca.crt"
 	caKeyFilename     = "ca.key"
 	caName            = "ldap CA"
