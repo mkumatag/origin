@@ -298,6 +298,8 @@ func ReplaceRegistryInImageURL(imageURL string) (string, error) {
 		registryAndUser = dockerLibraryRegistry
 	case "quay.io/k8scsi":
 		registryAndUser = quayK8sCSI
+	case "docker.io/openshifttests":
+		registryAndUser = "docker.io/openshifttests"
 	default:
 		if countParts == 1 {
 			// We assume we found an image from docker hub library
