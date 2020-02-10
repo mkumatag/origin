@@ -74,7 +74,7 @@ var _ = g.Describe("[Suite:openshift/oauth][Serial] ldap group sync", func() {
 		err = pod.CopyFromHost(ldapCAPath, remoteTmp)
 		o.Expect(err).NotTo(o.HaveOccurred())
 
-		err = pod.CopyFromHost(testutil.KubeConfigPath(), remoteTmp)
+		err = pod.CopyFromHost(testutil.KubeConfigPath(), path.Join(remoteTmp, kubeConfigFileName))
 		o.Expect(err).NotTo(o.HaveOccurred())
 
 		groupSyncScriptPath := path.Join(tmpDir, "groupsync.sh")
@@ -96,6 +96,7 @@ var _ = g.Describe("[Suite:openshift/oauth][Serial] ldap group sync", func() {
 			return true, nil
 		})
 		o.Expect(err).NotTo(o.HaveOccurred())
+		time.Sleep(10 * time.Second)
 
 		// Make it executable
 		_, err = pod.Exec("chmod +x /usr/bin/groupsync.sh")
